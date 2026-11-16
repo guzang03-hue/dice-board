@@ -1,3 +1,4 @@
+import { assetUrl } from "../core/assetUrl";
 import type { Scene } from "./Scene";
 import type { SceneManager } from "./SceneManager";
 import type { SaveManager } from "../core/SaveManager";
@@ -57,7 +58,7 @@ export class ResultScene implements Scene {
       ? td("endings", ending.id, "text", ending.text ?? "")
       : tu(victory ? "result_clear_sub" : "result_gameover_sub", victory ? "왕좌에 도달했다." : "HP가 바닥났다.");
     const artHtml = ending?.image
-      ? `<img class="result-art-img" src="${ending.image}" alt="${headTitle}" onerror="this.remove()" />`
+      ? `<img class="result-art-img" src="${assetUrl(ending.image)}" alt="${headTitle}" onerror="this.remove()" />`
       : "";
 
     this.panel.innerHTML = `

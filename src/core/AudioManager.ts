@@ -1,3 +1,4 @@
+import { assetUrl } from "./assetUrl";
 // 단순 오디오 매니저. assets.csv의 kind=audio 항목을 id로 등록하고 재생.
 // 브라우저 자동재생 정책상 첫 사용자 제스처(주사위 클릭) 이후 소리가 난다.
 
@@ -27,7 +28,7 @@ export class AudioManager {
   }
 
   register(id: string, url: string) { 
-    this.sounds.set(id, url); 
+    url = assetUrl(url); this.sounds.set(id, url); 
     // 브라우저 캐시에 올리기 위해 미리 Audio 객체 생성 (네트워크 지연/디코딩 지연 방지)
     const a = new Audio(url);
     a.preload = "auto";
@@ -55,7 +56,7 @@ export class AudioManager {
   private lastBgmUrl: string | null = null;
 
   playBgm(id: string) {
-    const url = this.sounds.get(id) ?? id;  // id 또는 직접 경로
+    const url = this.sounds.get(id) ?? assetUrl(id);  // id 또는 직접 경로
     if (!url) return;
     
     // ID가 다르더라도 최종 URL이 같으면 끊기지 않고 계속 재생 (경로 vs ID 혼용 방지)

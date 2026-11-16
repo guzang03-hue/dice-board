@@ -1,3 +1,4 @@
+import { assetUrl } from "../core/assetUrl";
 // UI 설정 해석 계층 — "코드 기본값 ← ui.csv(전역) ← config.csv(스테이지)" 3단 캐스케이드.
 // 모든 키는 기존 key/value 테이블의 행 추가로만 표현된다(칼럼·테이블 구조 불변).
 //
@@ -189,14 +190,14 @@ export class UiSettings {
       else if (d.kind === "bool") val = this.bool(d.key) ? "1" : "0";
       else val = this.str(d.key);
       if (val === "") root.style.removeProperty(d.cssVar);
-      else root.style.setProperty(d.cssVar, val);
+      else root.style.setProperty(d.cssVar, assetUrl(val));
     }
     for (const [k, v] of Object.entries(this.map)) {
       if (!k.startsWith(CSSVAR_PREFIX)) continue;
       const name = k.slice(CSSVAR_PREFIX.length);
       const varName = name.startsWith("--") ? name : `--${name}`;
       if (v === "") root.style.removeProperty(varName);
-      else root.style.setProperty(varName, v);
+      else root.style.setProperty(varName, assetUrl(v));
     }
   }
 }

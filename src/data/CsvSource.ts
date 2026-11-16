@@ -1,3 +1,4 @@
+import { assetUrl } from "../core/assetUrl";
 import type { DataSource } from "./DataSource";
 import { parseCsv, type CsvRow } from "./csv";
 
@@ -8,7 +9,7 @@ export class CsvSource implements DataSource {
 
   async load(name: string): Promise<CsvRow[]> {
     // 캐시 방지(Cache-Busting) 파라미터 추가
-    const url = this.baseUrl + name + ".csv?t=" + Date.now();
+    const url = assetUrl(this.baseUrl) + name + ".csv?t=" + Date.now();
     const res = await fetch(url);
     if (!res.ok) throw new Error(`CSV load failed: ${url} (${res.status})`);
     const text = await res.text();

@@ -1,3 +1,4 @@
+import { assetUrl } from "../core/assetUrl";
 // VN(비주얼 노벨) 렌더 레이어 (M27).
 // 화면 ~90%를 덮는 풀스크린 오버레이. 좌측에 배경+캐릭터 스프라이트, 우측 상단에 대사 창,
 // 그 아래 선택지를 둔다(첨부 레이아웃). 기존 Popup과 같은 계약(present → Promise<선택지 id>)이라
@@ -69,7 +70,7 @@ export class VNOverlay {
     if (view.background) {
       if (looksImage(view.background)) {
         const bg = document.createElement("img");
-        bg.className = "vn-bg"; bg.src = view.background; bg.alt = "";
+        bg.className = "vn-bg"; bg.src = assetUrl(view.background); bg.alt = "";
         bg.onerror = () => bg.remove();   // 로드 실패 시 기본 배경색만
         visual.appendChild(bg);
       } else {
@@ -82,7 +83,7 @@ export class VNOverlay {
         const pos = sprite.pos ?? "center";
         if (sprite.image && looksImage(sprite.image)) {
           const img = document.createElement("img");
-          img.className = `vn-sprite-img pos-${pos}`; img.src = sprite.image; img.alt = view.speaker ?? "";
+          img.className = `vn-sprite-img pos-${pos}`; img.src = assetUrl(sprite.image); img.alt = view.speaker ?? "";
           // 이미지 로드 실패 → 이모지 폴백으로 교체
           img.onerror = () => { img.remove(); if (sprite.icon) visual.appendChild(emojiSprite(sprite.icon, pos)); };
           visual.appendChild(img);

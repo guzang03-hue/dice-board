@@ -1,3 +1,4 @@
+import { assetUrl } from "../core/assetUrl";
 // 단순 DOM 모달. 특정 컨테이너(씬 패널) 안에 표시.
 import { tu } from "../core/i18n";
 
@@ -46,7 +47,7 @@ export class Popup {
       }
       if (art.image) {
         const img = document.createElement("img"); img.className = "popup-art-img";
-        img.src = art.image; img.alt = title;
+        img.src = assetUrl(art.image); img.alt = title;
         // 로드 실패하면 이미지 제거 → 이모지 폴백만 남김
         img.onerror = () => img.remove();
         artBox.appendChild(img);

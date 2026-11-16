@@ -1,3 +1,4 @@
+import { assetUrl } from "./assetUrl";
 // 전역 UI 테마 — ui.csv(key/value) 하나로 외형을 데이터 주도로 바꾸는 수단.
 // 색/폰트/간격은 :root CSS 변수로 주입하고(기존 var(--accent) 등이 전역 적용),
 // 시작화면 이름/태그라인은 콘텐츠로 보관해 MenuScene이 읽는다.
@@ -35,7 +36,7 @@ const IMAGE_KEYS: Record<string, string> = {
 
 // 경로/값을 CSS background-image 레이어 값으로. 빈=none, 이미 url()/none/gradient면 그대로, 그 외=경로로 보고 url() 감쌈.
 function asImage(v: string | undefined): string {
-  const s = v?.trim();
+  const s = assetUrl(v?.trim());
   if (!s) return "none";
   if (s === "none" || s.startsWith("url(") || s.includes("gradient(")) return s;
   return `url("${s}")`;

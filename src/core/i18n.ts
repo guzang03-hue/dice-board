@@ -1,3 +1,4 @@
+import { assetUrl } from "./assetUrl";
 // 문자열 해소 seam (다국어 토대).
 //
 // 게임의 모든 사용자 텍스트는 이 함수를 통과한다. 언어팩이 없으면(기본) 인라인으로
@@ -51,7 +52,7 @@ export function tu(id: string, fallback: string): string {
 /** 선택: 언어팩 JSON을 fetch해 올린다(없으면 조용히 무시). 번역 파이프라인 단계에서 사용. */
 export async function loadLanguage(lang: string, base = "/resources/data/"): Promise<boolean> {
   try {
-    const res = await fetch(`${base}strings_${lang}.json`);
+    const res = await fetch(`${assetUrl(base)}strings_${lang}.json`);
     if (!res.ok) return false;
     setStrings(await res.json());
     return true;

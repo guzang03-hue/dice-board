@@ -1,3 +1,4 @@
+import { assetUrl } from "../core/assetUrl";
 // 기존 main.ts의 인게임 로직을 씬으로 캡슐화.
 // SceneManager.go("game", { stageId, saveRun? }) 로 진입.
 
@@ -695,7 +696,7 @@ export class GameScene implements Scene {
       this.portraitEl.textContent = "";
       const img = document.createElement("img");
       img.className = "portrait-img";
-      img.src = url; img.alt = name ?? "portrait";
+      img.src = assetUrl(url); img.alt = name ?? "portrait";
       img.onerror = () => { this.portraitEl.textContent = portrait && !looksImage ? portrait : fallback; };
       this.portraitEl.appendChild(img);
     } else {
@@ -974,7 +975,7 @@ export class GameScene implements Scene {
       if (imgs.has(key)) return;
       const img = new Image();
       img.onload = () => this.redraw();
-      img.src = url;
+      img.src = assetUrl(url);
       imgs.set(key, img);
     };
     // 이미지 자산을 id로 등록 (tile_<type> 기본 스프라이트 포함)
