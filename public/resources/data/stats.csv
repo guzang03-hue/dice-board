@@ -1,0 +1,7 @@
+﻿스탯 ID,표시 이름,아이콘,종류(number/bool/status),최소값,최대값,시작값,턴당 증감,표시 여부,표현(bar/counter/flag/hidden),지속 턴(status),중첩 한도(status),매 턴 대상 ← stats.id(status),매 턴 증감(status)
+id,label,icon,kind,min,max,start,decay,visible,display,duration,max_stacks,per_turn_target,per_turn_amount
+string,string,string,string,int,int,int,int,bool,string,int,int,string,int
+plan,기획,📝,number,0,99,15,,1,counter,,,,
+prog,프로그래밍,💻,number,0,99,15,,1,counter,,,,
+art,아트,🎨,number,0,99,15,,1,counter,,,,
+vibe,팀 분위기,✨,number,0,99,15,,1,counter,,,,

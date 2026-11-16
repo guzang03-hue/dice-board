@@ -1,0 +1,24 @@
+{
+  "name": "dice-board",
+  "private": true,
+  "version": "1.6.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "data:migrate": "node tools/csv-sync.mjs migrate",
+    "data:bom": "node tools/csv-sync.mjs bom",
+    "data:import": "node tools/csv-sync.mjs import",
+    "data:export": "node tools/csv-sync.mjs export",
+    "data:strings": "node tools/csv-sync.mjs strings",
+    "data:strings:build": "node tools/csv-sync.mjs strings:build",
+    "data:validate": "node tools/validate.mjs"
+  },
+  "devDependencies": {
+    "exceljs": "^4.4.0",
+    "typescript": "^5.4.0",
+    "vite": "^5.2.0",
+    "xlsx": "^0.18.5"
+  }
+}

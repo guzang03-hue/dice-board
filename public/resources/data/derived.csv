@@ -1,0 +1,3 @@
+﻿파생 ID,대상 자원 ← stats.id,입력 자원 ← stats.id(빈=상수),가중치
+id,target,term,factor
+string,string,string,float

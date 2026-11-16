@@ -1,0 +1,23 @@
+조건 ID(고유),그룹 ← cond_group,대상 ← stats.id/flag,비교,값
+id,group_id,subject,op,value
+string,string,string,string,string
+1,ev_m_010_cond_pos,vibe,over,59
+2,ev_m_010_cond_neg,vibe,under,59
+3,ev_r_phase_1,flag.turn,under,20
+4,ev_r_phase_2,flag.turn,min,5
+5,ev_r_phase_2,flag.turn,under,20
+6,ev_r_phase_3,flag.turn,min,10
+7,ev_r_phase_3,flag.turn,under,20
+8,ev_r_phase_4,flag.turn,min,15
+9,ev_r_phase_4,flag.turn,under,20
+10,ev_r_phase_5,flag.turn,min,21
+11,ev_r_phase_5,flag.turn,under,42
+12,ev_r_phase_6,flag.turn,min,43
+13,cond_end_best,vibe,min,70
+14,cond_end_best,plan,min,70
+15,cond_end_best,prog,min,70
+16,cond_end_best,art,min,70
+17,cond_end_normal1,vibe,min,70
+18,cond_end_normal2,plan,min,60
+19,cond_end_normal2,prog,min,60
+20,cond_end_normal2,art,min,60

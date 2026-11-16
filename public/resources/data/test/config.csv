@@ -1,0 +1,9 @@
+설정 키,값
+key,value
+string,string
+start_tile,t_00
+goal_tile,t_50
+board_name,test
+dice_sides,1
+generator,weighted
+bgm,sfx_ingame

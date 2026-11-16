@@ -1,0 +1,4 @@
+﻿스테이지 ID,이름,설명,데이터 폴더,해금 비용,아이콘
+id,name,description,config_path,unlock_cost,icon
+string,string,string,string,int,string
+test,test,다중 캐릭터 테스트 맵,/resources/data/test/,0,🎲

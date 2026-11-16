@@ -1,0 +1,3 @@
+﻿업그레이드 ID,이름,설명,비용,효과 종류,대상 자원,랭크당 효과,최대 랭크
+id,label,description,cost,effect_kind,target,value,max_rank
+string,string,string,int,string,string,int,int

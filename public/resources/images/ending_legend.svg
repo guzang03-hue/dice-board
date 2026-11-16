@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
+  <defs>
+    <radialGradient id="glow" cx="0.5" cy="0.4" r="0.7">
+      <stop offset="0" stop-color="#3a3420"/>
+      <stop offset="1" stop-color="#15120c"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" fill="url(#glow)"/>
+  <g transform="translate(100 96)">
+    <polygon points="-46,18 -46,-22 -28,-2 0,-34 28,-2 46,-22 46,18" fill="#ffd24a" stroke="#b88a1a" stroke-width="3"/>
+    <rect x="-46" y="18" width="92" height="12" rx="3" fill="#e0b43a"/>
+    <circle cx="0" cy="-34" r="6" fill="#ff5a5a"/>
+    <circle cx="-46" cy="-22" r="5" fill="#7be38a"/>
+    <circle cx="46" cy="-22" r="5" fill="#7be38a"/>
+  </g>
+  <text x="100" y="180" font-family="sans-serif" font-size="18" fill="#ffe08a" text-anchor="middle">전설의 영웅</text>
+</svg>

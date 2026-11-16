@@ -1,0 +1,18 @@
+﻿UI 설정 키,값
+key,value
+string,string
+app_name,인디게임 성공기
+app_tagline,나만의 게임을 만들자
+accent,#e0a23c
+accent_dim,#b97f24
+menu_bg,"radial-gradient(ellipse at 50% 22%, #2b2333 0%, #14171c 72%)"
+menu_bg_image,/resources/images/ui_bg_menu.png
+ui_radius,24px
+font_family,
+lang,
+# ── UI 확장 키 예시 (앞의 #을 지우면 적용 — 전체 목록은 docs/UI-KEYS.md) ──,
+# ui_scale,1.2
+# board_zoom_max,4
+# portrait_size,72
+# show_log,0
+# anim_speed,2

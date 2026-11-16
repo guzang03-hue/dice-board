@@ -1,0 +1,51 @@
+string,string,string
+UI_popup_notice,알림
+UI_choice_locked,조건 미충족
+UI_choice_leave,지나간다
+UI_game_back_to_menu,메뉴로 돌아가기
+UI_char_default_name,주인공
+UI_game_status_effects,상태 효과
+UI_game_inventory,인벤토리
+UI_game_event_log,이벤트 로그
+UI_game_roll,주사위 굴리기,Roll Dice
+UI_game_mute,음소거
+UI_game_load_failed,로드 실패
+UI_fork_title,갈림길
+UI_fork_prompt,어느 길로 갈까?
+UI_fork_shortcut,지름길로 간다
+UI_fork_main,큰 길로 간다
+UI_skip_title,턴 스킵
+UI_skip_body,이번 턴은 쉰다.
+UI_char_select_title,캐릭터 선택
+UI_char_select_prompt,누구로 모험을 떠날까?
+UI_item_unusable,사용 불가
+UI_item_cant_use,지금은 사용할 수 없다.
+UI_menu_slot,슬롯
+UI_menu_turn,턴
+UI_menu_new,새 게임,New Game
+UI_menu_upgrade,업그레이드,Upgrade
+UI_menu_continue,이어하기
+UI_meta_rank,랭크
+UI_meta_maxed,✓ 최대 랭크
+UI_meta_cost,비용
+UI_meta_have,보유
+UI_meta_buy,업그레이드
+UI_meta_heading,영구 업그레이드
+UI_meta_explain,런 클리어/실패 시 메타 포인트를 얻어 영구 강화를 구매할 수 있습니다.
+UI_common_to_menu,메뉴로
+UI_result_turns,경과 턴
+UI_result_meta_gain,✨ 메타 포인트
+UI_result_retry,다시 도전
+UI_result_to_menu,메뉴로
+UI_stage_cleared,✓ 클리어
+UI_stage_unlock_click,— 클릭하여 해금
+UI_stage_unlock_need,필요
+UI_stageselect_heading,스테이지 선택
+UI_stage_need_points,포인트 부족
+UI_stage_unlock_title,스테이지 해금
+UI_stage_unlock_ok,해금
+UI_common_cancel,취소
+UI_popup_ok,확인,OK
+UI_vn_continue,계속
+UI_app_name,Dice Board
+UI_app_tagline,데이터로 빚는 주사위 모험,A dice adventure forged from data

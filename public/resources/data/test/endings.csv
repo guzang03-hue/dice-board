@@ -1,0 +1,7 @@
+﻿엔딩 ID,상황,조건 ← conditions.group_id,우선도,제목,본문,아이콘,이미지 경로
+id,when,cond_group,priority,title,text,icon,image
+string,string,string,int,string,string,string,string
+end_best,victory,cond_end_best,40,베스트 엔딩,팀 분위기도 최고! 게임도 완벽해!,🌟,
+end_normal1,victory,cond_end_normal1,30,노말 엔딩,게임은 조금 아쉽지만 다들 즐거웠으니 됐어.,😊,
+end_normal2,victory,cond_end_normal2,20,찝찝한 엔딩,게임은 성공했지만 팀원들은 모두 지쳐 떠났다...,😥,
+end_bad,victory,,10,배드 엔딩,게임도 망하고 팀도 망했다...,😢,

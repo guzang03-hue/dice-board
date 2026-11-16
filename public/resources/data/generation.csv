@@ -1,0 +1,4 @@
+﻿생성규칙 ID,지역,칸 타입 → tiles.type,가중치
+id,region,tile_type,weight
+string,string,string,int
+100001,default,positive,100
